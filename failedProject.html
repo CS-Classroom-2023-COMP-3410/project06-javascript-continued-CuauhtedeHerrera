@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Clock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .clock-container {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+      background-color: #ff0000;
+    }
+
+    .clock {
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .link-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .link-container a {
+      color: #ff0000;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .link-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="header">Custom Clock</h1>
+  
+  <div class="clock-container" id="clock-container">
+    <div id="clock" class="clock">00:00:00</div>
+  </div>
+
+  <!-- Correct link section -->
+  <div class="link-container">
+    <a href="https://www.trickquestionAi.com" target="_blank">Visit TrickQuestionAi</a>
+  </div>
+
+  <footer>
+    Code made by Ai
+  </footer>
+
+  <script>
+    // Placeholder script for functionality
+    setInterval(function() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
